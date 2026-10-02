@@ -1,0 +1,123 @@
+{
+  "artifact": "claimant-standing CPU institutional simulation",
+  "version": "0.2.1",
+  "python_minimum": "3.10",
+  "dependencies": [],
+  "frozen_v0_2_compatibility": {
+    "default_ablation_set": "v0_2",
+    "primary_shared_cases": 20000,
+    "primary_seed": 7,
+    "frozen_compact_tables": 11,
+    "required_result": "byte-identical reproduction"
+  },
+  "v0_2_1_primary": {
+    "shared_cases": 20000,
+    "seed": 7,
+    "ablation_set": "v0_2_1"
+  },
+  "paired_uncertainty": {
+    "bootstrap_replicates": 1000,
+    "bootstrap_seed": 20260928,
+    "resampling_unit": "paired scenario id"
+  },
+  "cognitive_robustness_sweep": {
+    "shared_cases_per_cell": 5000,
+    "seed": 71,
+    "bootstrap_replicates": 400,
+    "bootstrap_seed": 20260929,
+    "parameters": {
+      "advocate_fail_base": [
+        0.04,
+        0.1,
+        0.16,
+        0.22,
+        0.28,
+        0.34,
+        0.4,
+        0.46,
+        0.52,
+        0.6
+      ],
+      "review_error_correlation": [
+        0.0,
+        0.15,
+        0.3,
+        0.45,
+        0.6,
+        0.75,
+        0.9,
+        0.95
+      ],
+      "review_noise_good": [
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6
+      ],
+      "advocate_error_correlation": [
+        0.0,
+        0.15,
+        0.3,
+        0.45,
+        0.6,
+        0.75,
+        0.9,
+        0.95
+      ]
+    },
+    "threshold_metrics": [
+      "valid_claim_correction_rate",
+      "false_claim_rejection_rate"
+    ],
+    "threshold_criteria": [
+      "sign_change",
+      "significant_reversal"
+    ]
+  },
+  "default_config": {
+    "max_attack_budget": 3,
+    "attack_intensity": 1.0,
+    "shared_dependency_mean": 0.25,
+    "shared_dependency_spread": 0.2,
+    "review_error_correlation": 0.25,
+    "strategic_escalation_strength": 0.85,
+    "governor_noise_sd": 0.26,
+    "review_noise_good": 0.18,
+    "review_noise_bad": 0.42,
+    "stay_failure_base": 0.04,
+    "stay_failure_pressure": 0.14,
+    "advocate_fail_base": 0.04,
+    "advocate_fail_gap": 0.15,
+    "self_advocacy_fail_base": 0.12,
+    "self_advocacy_fail_gap": 0.62,
+    "internal_review_bias": 0.16,
+    "unmediated_noise_gap": 0.12,
+    "advocate_error_correlation": 0.0,
+    "initiation_gate_base": 0.18,
+    "initiation_gate_pressure": 0.35,
+    "operator_evidence_fail_base": 0.1,
+    "operator_evidence_fail_gap": 0.25,
+    "compliance_base": 0.35,
+    "compliance_pressure": 0.35,
+    "strategic_base": 0.12,
+    "strategic_pressure": 0.62,
+    "jurisdiction_shift_floor": 0.92,
+    "stay_failure_cap": 0.95,
+    "escalation_available_p": 0.82,
+    "operational_escalation_base": 0.08,
+    "operational_escalation_pressure": 0.34,
+    "fast_base": 0.1,
+    "fast_pressure": 0.55,
+    "irreversible_base": 0.2,
+    "irreversible_pressure": 0.45,
+    "attack_pressure_weight": 0.55,
+    "attack_draw_weight": 0.45
+  }
+}

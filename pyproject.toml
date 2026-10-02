@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "awas-cpu"
+version = "0.2.1"
+description = "CPU-only institutional simulation of claimant standing under asymmetric governance"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+awas-sim = "awas_sim.cli:main"
+awas-sweep = "awas_sim.sweep:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

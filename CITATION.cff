@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use or discuss this research artefact, please cite it as below."
+title: "Claimant standing under asymmetric governance: CPU institutional simulation v0.2.1"
+type: software
+authors:
+  - family-names: McCallion
+    given-names: Brian
+    orcid: "https://orcid.org/0009-0004-1442-1743"
+version: "0.2.1"
+abstract: >-
+  CPU-only synthetic institutional simulation testing claimant-held contestability
+  under asymmetric governance, including control independence, jurisdictional
+  reach, shared dependencies, compound attacks, component ablations, mechanism
+  decomposition and paired uncertainty analysis.
+keywords:
+  - AI alignment
+  - multi-agent systems
+  - contestability
+  - institutional AI
+  - non-domination

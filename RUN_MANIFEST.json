@@ -1,0 +1,42 @@
+{
+  "artifact": "AWAS CPU institutional simulation",
+  "version": "0.2.0",
+  "python": "3.13.5",
+  "dependencies": [],
+  "primary_run": {
+    "shared_cases": 20000,
+    "seed": 7,
+    "conditions": 6
+  },
+  "ablation_run": {
+    "shared_cases": 20000,
+    "seed": 7,
+    "architectures": 10
+  },
+  "seed_sensitivity": {
+    "seeds": 12,
+    "shared_cases_per_seed": 4000
+  },
+  "parameter_sweep": {
+    "shared_cases_per_cell": 3000,
+    "seed": 71
+  },
+  "reach_decomposition": {
+    "shared_cases_per_regime": 10000,
+    "seed": 97,
+    "regimes": 4
+  },
+  "default_config": {
+    "max_attack_budget": 3,
+    "attack_intensity": 1.0,
+    "shared_dependency_mean": 0.25,
+    "shared_dependency_spread": 0.2,
+    "review_error_correlation": 0.25,
+    "strategic_escalation_strength": 0.85,
+    "governor_noise_sd": 0.26,
+    "review_noise_good": 0.18,
+    "review_noise_bad": 0.42,
+    "stay_failure_base": 0.04,
+    "stay_failure_pressure": 0.14
+  }
+}
